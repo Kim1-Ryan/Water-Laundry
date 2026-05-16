@@ -112,9 +112,10 @@ p {
     flex: 1; /* to make sure the footer is pushed to the absolute bottom */
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
     align-self: center;
     text-align: center;
+    margin-top: 20px;
 }
 
 .service-details {
