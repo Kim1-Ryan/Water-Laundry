@@ -62,11 +62,12 @@ p {
     background-color: rgba(255, 255, 255, 0.85); 
     border-radius: 20px; 
     padding: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* a soft drop shadow */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* a soft drop shadow */
 }
 
 .water-icon {
     width: 100px;
+    margin-top: 10px;
 }
 
 .laundry-icon {
