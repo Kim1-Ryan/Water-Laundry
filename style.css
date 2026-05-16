@@ -87,6 +87,10 @@ p {
 
 
 /* contact page */
+.contact-h1{
+    margin-top: 0;
+}
+
 .contact-info {
     display: flex;
     flex-direction: column;
