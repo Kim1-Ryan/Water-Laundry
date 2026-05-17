@@ -110,9 +110,7 @@ p {
 /* water and laundry pages */
 .service-container {
     width: 80%;
-    height: 22%;
     display: flex;
-    flex: 1; /* to make sure the footer is pushed to the absolute bottom */
     flex-direction: row;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -167,7 +165,8 @@ p {
     width: 70%;
     align-self: center;
     text-align: center;
-    margin-top: 10px; /* ensures a small gap below cards */
+    margin-top: 30px; /* ensures a small gap below cards */
+    flex: 1;
 }
 
 /* contact button */
@@ -175,9 +174,9 @@ p {
     position: fixed;
     bottom: 25px; /* distance from the bottom of the screen */
     right: 25px;  /* distance from the right side of the screen */
-    background-color: #164374; /* matches deep blue heading color */
+    background-color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
-    padding: 15px;
+    padding: 15px 20px;
     border-radius: 50%; /* clean round shape */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     z-index: 9999; /* to make sure it floats on top of everything else */
@@ -194,4 +193,5 @@ p {
     width: 100%;
     text-align: center;
     padding: 15px 0;
+    margin-top: auto; /* ensures it stays locked to the screen floor */
 }
