@@ -26,6 +26,7 @@ body {
     width: 250px;
     border-radius: 50%;
     justify-self: center;
+    margin-bottom: 10px;
 }
 
 h1, h2 {
@@ -64,14 +65,14 @@ p {
     display: flex;
     flex: 1; /* to make sure the footer is pushed to the absolute bottom */
     flex-direction: row;
-    width: 90%;
+    width: 100%;
     justify-content: space-evenly;
     align-items: center;
 }
 
 .service {
     text-align: center;
-    width: 40%;
+    width: 50%;
     align-self: center;
     background-color: rgba(255, 255, 255, 0.85); 
     border-radius: 20px; 
@@ -173,11 +174,11 @@ p {
 /* contact button */
 .floating-contact-btn {
     position: fixed;
-    bottom: 25px; /* distance from the bottom of the screen */
-    right: 25px;  /* distance from the right side of the screen */
+    bottom: 35px; /* distance from the bottom of the screen */
+    right: 35px;  /* distance from the right side of the screen */
     background-color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
-    padding: 15px 20px;
+    padding: 20px;
     border-radius: 50%; /* clean round shape */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     z-index: 9999; /* to make sure it floats on top of everything else */
