@@ -27,7 +27,7 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 30px; 
+    font-size: 40px; 
     margin-top: 10px;  
     margin-bottom: 5px; 
 }
@@ -35,14 +35,14 @@ h1 {
 h2 {
     margin-top: 0;
     margin-bottom: 12px;
-    font-size: 24px;
+    font-size: 27px;
 }
 
 p {
     font-family: "Mulish", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
-    font-size: large;
+    font-size: 19px;
     font-style: normal;
     text-align: center;
     line-height: 1.5;
@@ -53,20 +53,20 @@ p {
 /* header sections */
 .header {
     text-align: center;
-    width: 80%;
+    width: 90%;
     align-self: center;
     margin-top: 15px; 
 }
 
 .logo {
-    width: 180px; 
+    width: 230px; 
     border-radius: 50%;
     transition: width 0.3s ease;
     margin-bottom: 5px;
 }
 
 .header p {
-    font-size: 16px;
+    font-size: 22px;
     line-height: 1.4;
     margin-bottom: 5px;
     max-width: 800px;
@@ -82,8 +82,8 @@ p {
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
-    margin: 10px 0; 
-    padding: 0 20px;
+    margin: 0; 
+    padding: 0;
 }
 
 .service {
@@ -106,12 +106,12 @@ p {
 }
 
 .water-icon {
-    width: 80px; 
+    width: 100px; 
     margin-top: 5px;
 }
 
 .laundry-icon {
-    width: 110px; 
+    width: 130px; 
 }
 
 /* service pages (water, laundry) */
@@ -152,7 +152,7 @@ p {
 .price-list li {
     font-family: "Mulish", sans-serif;
     font-weight: 500;
-    font-size: large;
+    font-size: 16px;
     text-align: center;
     margin-bottom: 12px;
 }
