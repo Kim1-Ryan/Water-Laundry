@@ -205,9 +205,29 @@ p {
         width: 90%; 
     }
     
+    .service-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: stretch; /* to force all cards to stretch to the exact same height */
+        gap: 15px;
+    }
+
     .service-details, .laundryService-details {
-        width: 31%; 
+        display: flex;
+        flex-direction: column;
+        width: 32%; 
         padding: 20px 15px;
+        min-height: auto; 
+        height: auto;   
+    }
+    
+    /* makes sure the list takes full vertical space so layout heights align neatly */
+    .price-list {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 
     .contact-info {
@@ -233,7 +253,7 @@ p {
         font-size: 16px; 
     }
 
-    /* column for mobile layout */
+    /* stacks horizontal components to clean vertical layouts */
     .container, .service-container {
         flex-direction: column;
         align-items: center;
@@ -242,20 +262,29 @@ p {
         margin: 15px 0;
     }
 
-    .service, .service-details, .laundryService-details, .contact-info, .delivery-details {
+    .service, .service-details, .laundryService-details, .delivery-details {
         width: 100%; 
         min-height: auto; 
         padding: 25px 20px;
     }
 
     .contact-info {
-        margin: 20px 0;
+        width: 90%; 
+        padding: 25px 20px;
+        margin: 20px auto; 
     }
 
+    .delivery-details {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    /* relocated floating contact button to the top right corner for mobile */
     .floating-contact-btn {
-        bottom: 25px;
-        right: 25px;
-        width: 55px;
-        height: 55px;
+        top: 20px;     /* positions it at the top */
+        right: 20px;   /* positions it on the right side */
+        bottom: auto;  /* clears out old desktop bottom rule */
+        width: 50px;
+        height: 50px;
     }
 }
