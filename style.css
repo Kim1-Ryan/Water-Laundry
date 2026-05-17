@@ -1,3 +1,4 @@
+/* global/base styles */
 * {
     box-sizing: border-box;
 }
@@ -9,34 +10,21 @@ body {
     min-height: 100vh;
     background-image: url(./whiteLinenbg.jpg);
     background-size: cover;
-    overflow: hidden; /* prevents scrollbar*/
+    background-position: center;
+    background-attachment: fixed; /* to keep the background image static while scrolling */
+    overflow-x: hidden;           /* to prevent broken horizontal content overflow */
+    overflow-y: auto;             /* for safe responsive touch scrolling */
     justify-content: flex-start;
 }
 
-/* header */
-.header {
-    text-align: center;
-    width: 80%;
-    align-self: center;
-    justify-self: center;
-    margin-top: 20px;
-}
-
-.logo {
-    width: 250px;
-    border-radius: 50%;
-    justify-self: center;
-    margin-bottom: 10px;
-}
-
+/* headings and common text elements */
 h1, h2 {
     font-family: "Archivo Black", sans-serif;
     font-weight: 400;
     font-style: normal;
     color: #164374;
-    align-self: center;
     text-align: center;
-    justify-self: center;
+    align-self: center;
 }
 
 h1 {
@@ -47,6 +35,8 @@ h1 {
 
 h2 {
     margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 24px;
 }
 
 p {
@@ -55,47 +45,114 @@ p {
     font-weight: 500;
     font-size: large;
     font-style: normal;
-    align-self: center;
     text-align: center;
-    justify-self: center;
-    margin-bottom: 5px;
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
-/* main page */
+/* header sections */
+.header {
+    text-align: center;
+    width: 80%;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.logo {
+    width: 250px;
+    border-radius: 50%;
+    transition: width 0.3s ease;
+}
+
+/* home page */
 .container {
     display: flex;
-    flex: 1; /* to make sure the footer is pushed to the absolute bottom */
+    flex: 1; 
     flex-direction: row;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
-    margin: 0;
-    padding: 0;
+    margin: 20px 0;
+    padding: 0 20px;
 }
 
 .service {
     text-align: center;
     width: 40%;
-    align-self: center;
     background-color: rgba(255, 255, 255, 0.85); 
     border-radius: 20px; 
     padding: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* a soft drop shadow */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .water-icon {
     width: 100px;
-    margin-top: 10.9px;
+    margin-top: 11px;
 }
 
 .laundry-icon {
     width: 140px;
 }
 
+/* service pages (water, laundry) */
+.service-container {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-self: center;
+    margin-top: 25px;
+}
+
+.service-details, .laundryService-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.85); 
+    border-radius: 20px; 
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+}
+
+.service-details { min-height: 200px; }
+.laundryService-details { min-height: 240px; }
+
+.price-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.price-list li {
+    font-family: "Mulish", sans-serif;
+    font-weight: 500;
+    font-size: large;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.price-list li:last-child {
+    margin-bottom: 0;
+}
+
+.delivery-details {
+    width: 70%;
+    align-self: center;
+    text-align: center;
+    margin-top: 35px; 
+    margin-bottom: 20px;
+    flex: 1;
+}
 
 /* contact page */
-.contact-h1{
+.contact-h1 {
     margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .contact-info {
@@ -104,93 +161,34 @@ p {
     align-items: center;
     align-self: center;
     text-align: center;
-    margin: 2% 0;
-    width: 60%;
+    margin: 40px 0;
+    width: 50%;
     background-color: rgba(255, 255, 255, 0.85); 
     border-radius: 20px; 
-    padding: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* a soft drop shadow */
+    padding: 35px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
 }
 
-/* water and laundry pages */
-.service-container {
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    align-self: center;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.service-details {
-    align-items: center;
-    align-self: flex-start;
-    text-align: center;
-    margin: 0;
-    width: 30%;
-    min-height: 200px;
-    background-color: rgba(255, 255, 255, 0.85); 
-    border-radius: 20px; 
-    padding: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* a soft drop shadow */
-}
-
-.laundryService-details {
-    align-items: center;
-    align-self: flex-start;
-    text-align: center;
-    margin: 0;
-    width: 30%;
-    min-height: 240px;
-    background-color: rgba(255, 255, 255, 0.85); 
-    border-radius: 20px; 
-    padding: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* a soft drop shadow */
-}
-
-.price-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.price-list li {
-    font-family: "Mulish", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-size: large;
-    font-style: normal;
-    align-self: center;
-    text-align: center;
-    justify-self: center;
-}
-
-.delivery-details {
-    width: 70%;
-    align-self: center;
-    text-align: center;
-    margin-top: 30px; /* ensures a small gap below cards */
-    flex: 1;
-}
-
-/* contact button */
+/* floating contact button */
 .floating-contact-btn {
     position: fixed;
-    bottom: 35px; /* distance from the bottom of the screen */
-    right: 35px;  /* distance from the right side of the screen */
-    background-color: rgba(255, 255, 255, 0.85);
-    text-decoration: none;
-    padding: 20px;
-    border-radius: 50%; /* clean round shape */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    z-index: 9999; /* to make sure it floats on top of everything else */
+    bottom: 35px; 
+    right: 35px;  
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 60px;   
+    height: 60px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 9999; 
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .floating-contact-btn:hover {
     background-color: #b8cdf1; 
-    transform: translateY(-3px); /* subtle lift effect */
+    transform: translateY(-4px); 
 }
 
 /* footer */
@@ -198,5 +196,66 @@ p {
     width: 100%;
     text-align: center;
     padding: 15px 0;
-    margin-top: auto; /* ensures it stays locked to the screen floor */
+    margin-top: auto; 
+}
+
+/* tablet screens */
+@media (max-width: 1024px) {
+    .header, .service-container, .contact-info, .delivery-details {
+        width: 90%; 
+    }
+    
+    .service-details, .laundryService-details {
+        width: 31%; 
+        padding: 20px 15px;
+    }
+
+    .contact-info {
+        width: 70%;
+    }
+}
+
+/* mobile screens */
+@media (max-width: 768px) {
+    .logo {
+        width: 180px; 
+    }
+
+    h1 {
+        font-size: 28px; 
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p, .price-list li {
+        font-size: 16px; 
+    }
+
+    /* column for mobile layout */
+    .container, .service-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px; 
+        padding: 10px 0;
+        margin: 15px 0;
+    }
+
+    .service, .service-details, .laundryService-details, .contact-info, .delivery-details {
+        width: 100%; 
+        min-height: auto; 
+        padding: 25px 20px;
+    }
+
+    .contact-info {
+        margin: 20px 0;
+    }
+
+    .floating-contact-btn {
+        bottom: 25px;
+        right: 25px;
+        width: 55px;
+        height: 55px;
+    }
 }
