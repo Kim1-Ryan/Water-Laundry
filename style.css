@@ -228,6 +228,10 @@ p {
         overflow-y: auto;
     }
 
+    .service {
+        align-items: stretch;
+    }
+
     .header, .service-container, .contact-info, .delivery-details {
         width: 90%; 
     }
@@ -276,6 +280,14 @@ p {
 
     p, .price-list li {
         font-size: 16px; 
+    }
+
+    .header p {
+        font-size: 18px;
+    }
+    
+    .service p {
+        font-size: 17px;
     }
 
     /* column, for cleaner layout on mobile screens */
