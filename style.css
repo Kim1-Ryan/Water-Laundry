@@ -170,6 +170,25 @@ p {
     margin-top: 10px; /* ensures a small gap below cards */
 }
 
+/* contact button */
+.floating-contact-btn {
+    position: fixed;
+    bottom: 25px; /* distance from the bottom of the screen */
+    right: 25px;  /* distance from the right side of the screen */
+    background-color: #164374; /* matches deep blue heading color */
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 50%; /* clean round shape */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 9999; /* to make sure it floats on top of everything else */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.floating-contact-btn:hover {
+    background-color: #0f3054; /* darkens slightly on hover */
+    transform: translateY(-3px); /* subtle lift effect */
+}
+
 /* footer */
 .footer {
     width: 100%;
