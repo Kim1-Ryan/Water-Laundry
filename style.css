@@ -110,6 +110,7 @@ p {
 /* water and laundry pages */
 .service-container {
     width: 80%;
+    height: 60%;
     display: flex;
     flex: 1; /* to make sure the footer is pushed to the absolute bottom */
     flex-direction: row;
