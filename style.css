@@ -308,7 +308,10 @@ p {
     .contact-info {
         width: 90%; 
         padding: 25px 20px;
-        margin: 20px auto; 
+        margin-top: 20px; 
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .delivery-details {
